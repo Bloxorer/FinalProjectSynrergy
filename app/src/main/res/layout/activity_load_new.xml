@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#660066"
+    tools:context="view.load_new">
+
+    <ImageButton
+        android:id="@+id/back_load_new"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="68dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/editname"
+        app:layout_constraintEnd_toStartOf="@+id/title_load_new"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <TextView
+        android:id="@+id/title_load_new"
+        android:layout_width="142dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/background_title"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Добавить новое"
+        android:textAllCaps="true"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/back_load_new"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editname"
+        android:layout_width="290dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/background_title"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Введите название"
+        app:layout_constraintBottom_toTopOf="@+id/yep"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_load_new" />
+
+    <ImageButton
+        android:id="@+id/yep"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="60dp"
+        android:background="@null"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/pre_image_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/addImage_new"
+        app:layout_constraintTop_toBottomOf="@+id/editname"
+        app:srcCompat="@drawable/yep" />
+
+    <ImageButton
+        android:id="@+id/addImage_new"
+        android:layout_width="142dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="68dp"
+        android:background="@null"
+        android:contextClickable="false"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editname"
+        app:srcCompat="@drawable/background_title" />
+
+    <TextView
+        android:id="@+id/addImage_new_text"
+        android:layout_width="142dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="69dp"
+        android:layout_marginBottom="286dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Добавить изображение"
+        android:textAllCaps="true"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/yep"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editname" />
+
+    <ImageView
+        android:id="@+id/pre_image"
+        android:layout_width="142dp"
+        android:layout_height="142dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="209dp"
+        android:layout_marginBottom="76dp"
+        android:background="@null"
+        android:rotation="0"
+        android:rotationX="0"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addImage_new"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/pre_image_text"
+        android:layout_width="133dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/background_title"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Предпоказ изображения"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pre_image"
+        app:layout_constraintTop_toBottomOf="@+id/yep" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
