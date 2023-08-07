@@ -38,3 +38,4 @@ public class Delete extends AppCompatActivity {
     };
 
 }
+//шел 1ый час ночи всего, а я уже закончил
