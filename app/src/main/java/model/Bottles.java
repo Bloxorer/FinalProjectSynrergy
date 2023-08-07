@@ -1,22 +1,14 @@
 package model;
 
-public class Bottles {
+import java.io.Serializable;
+
+public class Bottles implements Serializable {
     private String name;
-    private int number;
-    private int bottleResourse;
-
-    public int getBottleResourse() {
-        return bottleResourse;
-    }
-
-    public void setBottleResourse(int bottleResourse) {
-        this.bottleResourse = bottleResourse;
-    }
-
-    public Bottles(String name, int number, int bottleResourse) {
+    private String number;
+    public Bottles(String name, String number) {
         this.name = name;
         this.number = number;
-        this.bottleResourse = bottleResourse;
+
     }
 
     public String getName() {
@@ -27,11 +19,11 @@ public class Bottles {
         this.name = name;
     }
 
-    public int getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 }
