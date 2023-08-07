@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             Intent myWebLink = new Intent(android.content.Intent.ACTION_VIEW);
-            myWebLink.setData(Uri.parse("https://www.google.ru/maps/@55.7661831,37.729685,9.2z?entry=ttu"));
+            myWebLink.setData(Uri.parse("https://yandex.ru/maps/213/moscow/category/alcoholic_beverage_store/184107899/?ll=37.713732%2C55.724401&sctx=ZAAAAAgBEAAaKAoSCZFigEQTCENAEfhSeNDs1ktAEhIJGw%2B22O1TBkARczCbAMPy7z8iBgABAgMEBSgKOABAAUgBYhJsZXRvX3ZfZ29yb2RlPXRydWVqAnJ1nQHNzEw9oAEAqAEAvQFGWixpwgGNAfv1jbmGAsvoroeVBevi06wFkPDTz%2BgDr927yKEEtZ%2BP2Ab5r83ujAf62uv3Bf68yb37BbK0hoQEtKPey%2F4F0NDMwwb2%2F9DU%2FAHYwJmSBIG1%2B%2FESgqmynsQF6p%2BExOMClfi7zwTLqN2n2Ab9zLjMhwSu8MWj9gTk9o60J82r07fTBpPQ3dSRBvPor5zzA%2BoBAPIBAPgBAIICGygoY2F0ZWdvcnlfaWQ6KDE4NDEwNzg5OSkpKYoCCTE4NDEwNzg5OZICAJoCDGRlc2t0b3AtbWFwc6oC5wEyMjE4ODQ4MzYxNSwxOTI2MTc2NDY2NjQsNDc3MjE0ODk0NjEsMzc0Njg0NzI5OCw2OTUxODk1NzY2MSw2ODE0MjA4MDAzNCw2MDAzNDY5LDI2MDM0ODYwNDQsMjg2MDM3NzI3MiwxMDQyNzU5Mjk0NzUsNTQ5NzU1NDkyODYsODU1ODg3MDMyODMsMTQxOTc5OTE4MDI0LDIzMzgyOTcyNDUzMiw2MDAzMjA2LDEzODYwNTA3MTc3OCw2OTMzMTk1NTUxOSw4NzA3NjgxMDA1LDY3OTQ4MTg0MjAxLDM2MzQ1NTA0MTE%3D&sll=37.713732%2C55.724401&source=serp_navig&sspn=0.986761%2C0.352567&z=10.55"));
             startActivity(myWebLink);
         }
     };

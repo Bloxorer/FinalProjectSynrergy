@@ -26,8 +26,11 @@ import viewmodel.DatabaseHelper;
 
 public class list_of_bottles extends AppCompatActivity {
     private ImageButton back;
+    private ImageButton delete;
+    private ImageButton add;
     private RecyclerView recyclerView;
     private Bottles bottles;
+
     List<Bottles> bottles_list = new ArrayList<Bottles>();
 
     DatabaseHelper database;
@@ -39,6 +42,11 @@ public class list_of_bottles extends AppCompatActivity {
         setContentView(R.layout.activity_list_of_bottles);
         back = findViewById(R.id.backlist);
         recyclerView = findViewById(R.id.listBottles);
+        delete = findViewById(R.id.del);
+        add = findViewById(R.id.add);
+        add.setOnClickListener(add_listener);
+        delete.setOnClickListener(del);
+
         database = new DatabaseHelper(this);
         allBottles();
         back.setOnClickListener(backlist);
@@ -53,8 +61,6 @@ public class list_of_bottles extends AppCompatActivity {
             Intent back_intent = new Intent(getApplicationContext(), MainActivity.class);
             back_intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(back_intent);
-
-
         }
     };
 
@@ -63,9 +69,24 @@ public class list_of_bottles extends AppCompatActivity {
         Cursor cursor = database.readNotes();
 
         while (cursor.moveToNext()){
-            bottles_list.add(new Bottles(cursor.getString(1), cursor.getString(2)));
+            bottles_list.add(new Bottles(cursor.getString(1), cursor.getString(2), cursor.getString(0)));
         }
     }
 
+    private View.OnClickListener del = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(getApplicationContext(), Delete.class);
+            startActivity(intent);
+        }
+    };
+    private View.OnClickListener add_listener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(getApplicationContext(), load_new.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        }
+    };
 
 }

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,9 +18,10 @@ import java.util.List;
 
 import model.Bottles;
 
-public class BottleAdapter extends RecyclerView.Adapter<BottleAdapter.ViewHolder> {
+public class BottleAdapter extends RecyclerView.Adapter<BottleAdapter.ViewHolder>{
     private Context context;
     private final List<Bottles> bottles;
+    private static ImageButton delete;
 
     public BottleAdapter(Context context, List<Bottles> bottles) {
         this.context = context;
@@ -37,6 +39,7 @@ public class BottleAdapter extends RecyclerView.Adapter<BottleAdapter.ViewHolder
         Bottles bottle = bottles.get(position);
         holder.name.setText(bottle.getName());
         holder.number.setText(bottle.getNumber());
+        holder.id.setText("id:" + bottle.getId());
     }
 
     @Override
@@ -45,13 +48,15 @@ public class BottleAdapter extends RecyclerView.Adapter<BottleAdapter.ViewHolder
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
-        final TextView number, name;
+        final TextView number,  name, id;
         ConstraintLayout item_list;
         public ViewHolder(View itemView) {
             super(itemView);
             number = itemView.findViewById(R.id.number_bottle);
             name = itemView.findViewById(R.id.name_bottle);
             item_list = itemView.findViewById(R.id.item_list);
+            id = itemView.findViewById(R.id.id);
+            delete = itemView.findViewById(R.id.del);
         }
     }
 
